@@ -1,0 +1,105 @@
+@import 'libs/normalize';
+@import 'libs/font';
+
+
+@import 'base/variables';
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__phone:hover, .menu__link:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-image: url(../icons/arrow-main.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-next {
+    rotate: 180deg;
+}
+
+.swiper-button-next:hover {
+    background-image: url(../icons/arrow-gold.svg);
+    rotate: 360deg;
+}
+
+.swiper-button-prev:hover {
+    background-image: url(../icons/arrow-gold.svg);
+    rotate: 180deg;
+}
+  
+.swiper-button-next::after, .swiper-button-prev::after {
+    display: none;
+}
+
+@media (max-width: 1024px) { 
+    .container {
+        padding: 0 15px;
+    }
+}
+
+
+@import 'blocks/header';
+@import 'blocks/hamburger';
+@import 'blocks/logo';
+@import 'blocks/menu';
+@import 'blocks/promo';
+@import 'blocks/contacts';
+@import 'blocks/modal';
+@import 'blocks/buttons';
+@import 'blocks/titles';
+@import 'blocks/social';
+@import 'blocks/information';
+@import 'blocks/reviews';

@@ -1,0 +1,38 @@
+.contacts {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        & .btn {
+            margin: 0 auto;
+        }
+    }
+    &__input {
+        width: 100%;
+        background: #fff;
+        border: none;
+        outline: 0;
+        border: 1px solid $main-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        &__input {
+            height: 8vw;
+            font-size: 3vw;
+            padding: 0 3vw;
+            margin-bottom: 3vw;
+        } 
+    }
+}
+
+@media (min-width: 769px) {
+    .contacts {
+        &__input {
+            height: 70px;
+            font-size: 20px;
+            padding: 0 30px;
+            margin-bottom: 20px;
+        } 
+    }
+}

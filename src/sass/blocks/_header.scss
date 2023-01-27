@@ -1,0 +1,105 @@
+.header {   
+    z-index: 15;
+    
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__phone {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px;
+        &::before {
+            content: '';
+            background-image: url(../../icons/call-calling.svg);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__feedback {
+            padding: 0 4.3vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+
+}
+
+@media (max-width: 1024px) {
+    .header {
+        position: fixed;
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        padding: 20px 0;
+        &__item {
+            &_mob {
+                display: none;
+            }
+        }
+        &__feedback .btn {
+            display: none;
+        }
+        & .menu {
+            order: 1;
+        }
+        &__feedback {
+            justify-content: flex-start;
+            align-items: center;
+            order: 2;
+        }
+        &__phone {
+            padding-left: 60px;
+            font-size: 36px;
+            line-height: 40px;
+            color: #000;
+        }
+        &__m{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+            overflow-y: scroll;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        position: absolute;
+        padding: 55px 0 54px 0;
+        &__phone {
+            padding-left: 37px;
+            padding-right: 3px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            color: #fff;
+        }
+        &__m { 
+            display: none;
+        }
+    }
+}

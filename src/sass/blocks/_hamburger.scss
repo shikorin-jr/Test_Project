@@ -1,0 +1,52 @@
+.hamburger {
+    cursor: pointer;
+    & div {
+        background-color: #000;
+        transition: all 0.3s ease
+    }
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        & div {
+            display: block;
+            width: 40px;
+            margin: 8px 0;
+            height: 3.5px;
+            background-color: $second-color;
+        }
+    }
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+        background-color: $second-color;
+        transition: all 1s ease;
+    }
+    .toggle .line2 {
+        transform: scaleY(0);;
+        background-color: $second-color;
+        transition: all 1s ease;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-8px,-8px);
+        background-color: $second-color;
+        transition: all 1s ease;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+    .hidden {
+        overflow: hidden;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .hamburger {
+        display: none;
+    }
+}

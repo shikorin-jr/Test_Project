@@ -1,0 +1,50 @@
+h1 {
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 600;
+    color: $second-color;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 769px) {
+    h1 {
+        font-size: 64px;
+        line-height: 88px;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

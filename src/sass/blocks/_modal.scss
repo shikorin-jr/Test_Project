@@ -1,0 +1,46 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    &__dialog {
+        max-width: 80%;
+        margin: 20px auto
+    }
+    &__content {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+        max-height: 95vh;
+        overflow-y: auto;
+        padding: 5% 10%;
+        & .contacts__form {
+            align-items: center;
+            margin-right: 0;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 40px;
+        color: #000;
+        opacity: .5;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        cursor: pointer
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: $main-color;
+    }
+}
